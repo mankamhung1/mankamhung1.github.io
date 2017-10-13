@@ -8,6 +8,9 @@ var container;
     var windowHalfY = window.innerHeight / 2;
 
     var body = document.getElementsByTagName("body");
+    var body = window.getComputedStyle(document.body, null);
+bgColor = bodyStyle.backgroundColor;
+fgColor = bodyStyle.color;
 
     window.onload = function() {
       var tracker = new tracking.ColorTracker();
@@ -71,7 +74,7 @@ var container;
         }
       });
       if (maxRectArea > 0) {
-        body.style.background = 'linear-gradient(to right, #f6f1d3 5%, #550c65 90%, #293f50)';
+        body.background = 'linear-gradient(to right, #f6f1d3 5%, #550c65 90%, #293f50)';
         var rectCenterX = maxRect.x + (maxRect.width/2);
         var rectCenterY = maxRect.y + (maxRect.height/2);
         mouseX = (rectCenterX - 160) * (window.innerWidth/320) * 10;
