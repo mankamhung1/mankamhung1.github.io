@@ -7,10 +7,9 @@ var container;
     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
 
-    var body = document.getElementsByTagName("body");
-
     window.onload = function() {
       var tracker = new tracking.ColorTracker();
+      var body = document.body;
       console.log ("Tracking !!!!!!");
       tracker.setMinDimension(5);
       tracker.setMinGroupSize(10);
