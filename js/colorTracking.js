@@ -11,6 +11,7 @@ var container;
 
     window.onload = function() {
       var tracker = new tracking.ColorTracker();
+      console.log ("Tracking !!!!!!");
       tracker.setMinDimension(5);
       tracker.setMinGroupSize(10);
       tracking.track('#video', tracker, { camera: true });
