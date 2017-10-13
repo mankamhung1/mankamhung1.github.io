@@ -9,7 +9,6 @@ var container;
 
     window.onload = function() {
       var tracker = new tracking.ColorTracker();
-      var body = document.body;
       console.log ("Tracking !!!!!!");
       tracker.setMinDimension(5);
       tracker.setMinGroupSize(10);
@@ -70,7 +69,7 @@ var container;
         }
       });
       if (maxRectArea > 0) {
-        body.style.background = 'linear-gradient(to right, #f6f1d3 5%, #550c65 90%, #293f50)';
+        document.body.style.background = 'linear-gradient(to right, #f6f1d3 5%, #550c65 90%, #293f50)';
         var rectCenterX = maxRect.x + (maxRect.width/2);
         var rectCenterY = maxRect.y + (maxRect.height/2);
         mouseX = (rectCenterX - 160) * (window.innerWidth/320) * 10;
