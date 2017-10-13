@@ -9,8 +9,6 @@ var container;
 
     var body = document.getElementsByTagName("body");
     var body = window.getComputedStyle(document.body, null);
-bgColor = bodyStyle.backgroundColor;
-fgColor = bodyStyle.color;
 
     window.onload = function() {
       var tracker = new tracking.ColorTracker();
