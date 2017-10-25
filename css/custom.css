@@ -1,28 +1,130 @@
 .navbar {
-  background: #648880;
-  background: linear-gradient(to right, #f6f1d3 5%, #998880 90%, #293f50);
+  background:transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
-body {
-  background: #648880;
-  background: linear-gradient(to right, #f6f1d3 5%, #998880 90%, #293f50);
+
+video {
+  visibility: hidden;
 }
 
-#home dd {
-  margin-left: 20px;
+
+canvas {
+  display: none;
+}
+
+nav {
+  font-family: 'Caudex', serif;
+}
+
+@media(max-width:768px) {
+  .navbar {
+    background: black;
+    opacity: 0.7;
+  }
+  .navbar-default .nav-link.top_right {
+    color: white;
+    opacity: 0.8;
+  }
+  #logo {
+    color: white;
+    opacity: 1;
+  }
+}
+
+.cover_bg {
+  background-image: url(../img/cover_film.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.cover {
+  position: absolute;
+  color: grey;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.bio {
+  background-color: rgb(10, 10, 10);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bio_p {
+  margin: 10vh;
+  display: block;
+  max-width: 400px;
+}
+#bio_title {
+  font-family:'Caudex',serif;
+  text-align: center;
+}
+#bio_name {
+  opacity: 0.7;
+}
+#bio_detail {
+  opacity: 0.5;
+}
+#showcase {
+  background-color: rgb(10, 10, 10);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  opacity: 0;
+  transition: .5s;
+  background-color: rgb(10, 10, 10);
+}
+.text {
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.grid-row:hover .overlay {
+  opacity: 0.75;
+}
+.grid-row {
+  background-color: rgb(10, 10, 10);
+  padding: 0px;
 }
 
 .social {
   color: black;
-  padding-right: 5px;
 }
 
-#profile {
+#Arrow {
+  text-align: center;
+}
+#leftArrow, #rightArrow {
+  color: white;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+#profile_pic {
   max-width: 200px;
   height: auto;
 }
 
-#intro {
+#cover {
   padding-right: 50px;
 }
 
@@ -41,8 +143,7 @@ body {
 	min-height:450px;
 	width: 100%;
 	height:100%;
-	padding-top:100px;
-	padding-bottom:100px;
+	padding-top:0px;
 	display: none;
 }
 
@@ -52,9 +153,10 @@ body {
   display: none;
 }
 
-.photo {
-  max-width: 500px;
+#profile_photo {
+  max-width: 20vw;
   height: auto;
+  margin-left: 10vh;
 }
 
 .page-link {
@@ -70,7 +172,11 @@ body {
 }
 
 #home {
-  padding-top:200px;
+  padding-top:0px;
   min-height:450px;
 	display: block;
+}
+
+.photo {
+  max-width: 30vw;
 }
